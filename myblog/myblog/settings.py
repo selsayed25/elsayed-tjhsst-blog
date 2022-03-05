@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -125,3 +126,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Ion Authentication
+# https://guides.tjhsst.edu/ion/using-ion-oauth
+
+AUTHENTICATION_BACKENDS = ['ion_oauth.oauth.IonOauth2']
+
+SOCIAL_AUTH_ION_KEY = []
+
+SOCIAL_AUTH_ION_SECRET = []
