@@ -1,3 +1,4 @@
+from django.views import View
 from . import views
 from django.urls import path
 urlpatterns = [
